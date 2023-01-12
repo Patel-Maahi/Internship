@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <header>
+                <h1>Personal Details</h1>
+            </header>
+        </legend>
+        <main>
+            <form>
+                <label for="first name">First Name:*</label>
+                <input type="text" name="Name" id="first name" placeholder="firstname" required>
+                <br>
+                <br>
+                <label for="last name">Last Name:</label>
+                <input type="text" name="name" id="last name" placeholder="lastname">
+                <br>
+                <br>
+                <fieldset>
+                    <legend>
+                        <label for="gender">Gender:</label>
+                    </legend>
+                    <br>
+                    <label for="male">Male:</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="female">Female:</label>
+                    <input type="radio" name="gender" id="female">
+                </fieldset>
+                <br>
+                <br>
+                <label for="email-1">Email:*</label>
+                <input type="email" name="email" id="email-1" required>
+                <br>
+                <br>
+                <label for="phone no.">Phone Number:</label>
+                <input type="number" name="phone No." id="phone no.">
+                <br>
+                <br>
+                <label for="DOB">Date of Birth:</label>
+                <input type="date" name="Date of Birth" id="DOB">
+                <br>
+                <br>
+                <label for="address-1">Address:</label>
+                <textarea name="address" id="address-1" rows="4" cols="50"></textarea>
+                <br>
+                <br>
+                <label for="document">Upload Document:</label>
+                <input type="file" name="documents" id="document">
+                <br>
+                <br>
+                <button>Submit</button>
+                <button>Reset</button>
+                <br>
+                <br>
+                <footer>
+                    <nav>
+                        <a href="#" target="_blank">About Us</a>
+                        <a href="#" target="_blank">Contact Us</a>
+                    </nav>
+                </footer>
+    </fieldset>
+    </form>
+    </main>
+</body>
+
+</html>
