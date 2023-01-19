@@ -74,7 +74,6 @@ body {
   color: white;
 }
 .investment-icon {
-  
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -101,9 +100,9 @@ body {
   margin: 200px;
   display: inline-block;
 }
-.cashback{
-    display: inline-block;
-    margin: 200px;
+.cashback {
+  display: inline-block;
+  margin: 200px;
 }
 .cashback-icon {
   height: 50px;
@@ -127,121 +126,111 @@ body {
   font-weight: 700;
   font-size: 12px;
 }
-.cash{
-    display: inline-block;
-    margin: 200px;
+.cash {
+  display: inline-block;
+  margin: 200px;
 }
-.cash-icon{
-    height: 50px;
+.cash-icon {
+  height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: white;
   display: inline-block;
-
 }
-.cash-price{
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-color: var(--text-color);
-}
-   
-
-.cash-heading{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    color: var(--text-p-color); 
+.cash-price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text-color);
 }
 
-.google-icon{
-    height: 50px;
+.cash-heading {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-p-color);
+}
+
+.google-icon {
+  height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: white;
   display: inline-block;
   padding: 45px;
-
 }
-.google{
-    height: 150px;
+.google {
+  height: 150px;
   width: 160px;
-  background-color:white;
+  background-color: white;
   border-radius: 10px;
   margin-left: 15px;
   margin-top: 50px;
   display: inline-block;
   margin-left: 200px;
-  
 }
-.google-text{
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 12px;
-color: var(--text-color);
-text-align: center;
-padding: 15px;
-
+.google-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px;
 }
-.vpn{
-    height: 150px;
+.vpn {
+  height: 150px;
   width: 160px;
-  background-color:white;
+  background-color: white;
   border-radius: 10px;
   margin-left: 15px;
   margin-top: 50px;
   display: inline-block;
   margin-left: 250px;
-  
 }
-.vpn-icon{
-    height: 50px;
+.vpn-icon {
+  height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: white;
   display: inline-block;
   padding: 45px;
 }
-.vpn-text{
-    color: var(--text-color);
-text-align: center;
-padding: 15px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 12px;
-
+.vpn-text {
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
 }
-.service{
-    height: 150px;
+.service {
+  height: 150px;
   width: 160px;
-  background-color:white;
+  background-color: white;
   border-radius: 10px;
   margin-left: 15px;
   margin-top: 50px;
   display: inline-block;
   margin-left: 400px;
-  
 }
-.service-icon{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: white;
-    display: inline-block;
-    padding: 45px;  
-
+.service-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  padding: 45px;
 }
-.service-text{
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 12px;
-color: var(--text-color);
-text-align: center;
-padding: 15px;
+.service-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px;
 }
-
