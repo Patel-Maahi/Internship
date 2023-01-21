@@ -51,7 +51,7 @@ body {
   background-color: #ff6633;
   border-radius: 10px;
   margin-left: 100px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 .apple-icon {
   padding: 45px;
@@ -95,14 +95,13 @@ body {
   color: var(--text-p-color);
   padding-top: 10px;
 }
-
 .investment {
-  margin: 200px;
+  margin-left: 180px;
   display: inline-block;
 }
 .cashback {
   display: inline-block;
-  margin: 200px;
+  margin-left: 370px;
 }
 .cashback-icon {
   height: 50px;
@@ -128,7 +127,7 @@ body {
 }
 .cash {
   display: inline-block;
-  margin: 200px;
+  margin-left: 290px;
 }
 .cash-icon {
   height: 50px;
@@ -188,7 +187,7 @@ body {
   margin-left: 15px;
   margin-top: 50px;
   display: inline-block;
-  margin-left: 250px;
+  margin-left: 120px;
 }
 .vpn-icon {
   height: 50px;
@@ -215,7 +214,7 @@ body {
   margin-left: 15px;
   margin-top: 50px;
   display: inline-block;
-  margin-left: 400px;
+  margin-left: 220px;
 }
 .service-icon {
   height: 50px;
@@ -233,4 +232,10 @@ body {
   color: var(--text-color);
   text-align: center;
   padding: 15px;
+}
+.container-two{
+  margin-top: 110px;
+}
+.container-three{
+  margin-top: 130px;
 }
