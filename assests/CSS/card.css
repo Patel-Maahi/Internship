@@ -5,8 +5,7 @@
 }
 html{
     height: 100%;
-    width: 100%;
-    
+    width: 100%;   
 }
 body{
     height: 100%;
@@ -15,7 +14,6 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #EBEBEB;
-
 }
 :root{
     --text-color:#fff;
@@ -47,6 +45,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .container-1{
     display: flex;
@@ -98,8 +97,7 @@ body{
 .container-2{
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    
+    margin-top: 50px;   
 }
 .container-3{
     display: flex;
@@ -113,7 +111,6 @@ body{
     display: flex;
     align-items: center;
     margin-top: 50px;
-
 }
 .line{
     margin-left: 20px;
@@ -131,8 +128,7 @@ body{
     font-weight: 700;
     font-size: 12px;
     color: #6B7A99;
-    font-family: sans-serif;
-    
+    font-family: sans-serif;    
 }
 .content-1{
     margin-top: 20px;
@@ -150,8 +146,7 @@ body{
     margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 .live-icon{
     height: 30px;
@@ -167,12 +162,10 @@ body{
 font-size: 12px;
 font-family: sans-serif;
 color: #6B7A99;
-
 }
 .text-view{
     font-weight: 700;
 font-size: 12px;
 font-family: sans-serif;
 color: #6B7A99
-
 }
