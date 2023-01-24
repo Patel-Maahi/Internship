@@ -3,7 +3,6 @@
   padding: 0%;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 html {
   height: 100%;
   width: 100%;
@@ -15,19 +14,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #ebebeb;
-=======
-html{
-    height: 100%;
-    width: 100%;   
-}
-body{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #EBEBEB;
->>>>>>> 00b0388e5c18842530badd3bd1b6e3cc8e9e8873
 }
 :root {
   --text-color: #fff;
@@ -50,7 +36,6 @@ body{
   font-weight: 700;
   color: var(--text-color);
 }
-<<<<<<< HEAD
 .btn-next {
   height: 50px;
   width: 50px;
@@ -60,18 +45,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-=======
-.btn-next{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #26334D;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
->>>>>>> 00b0388e5c18842530badd3bd1b6e3cc8e9e8873
 }
 .container-1 {
   display: flex;

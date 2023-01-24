@@ -12,10 +12,10 @@ body {
   --text-o-color: #fff;
   --text-m-color: #adb8cc;
 }
-.main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  height: 100px;
+  width: 100%;
+  border-bottom: solid #edeff2;
 }
 .menu-icon {
   height: 50px;
@@ -26,6 +26,8 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-top: 20px;
+  margin-left: 25px;
 }
 .menu-text {
   font-family: sans-serif;
@@ -33,24 +35,19 @@ body {
   font-weight: 700;
   font-size: 18px;
   color: var(--text-color);
-}
-.header {
-  height: 100px;
-  width: 100%;
-  border: solid #edeff2;
-  padding: 20px;
+  margin-top: 30px;
 }
 .left-menu {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   align-items: center;
 }
 .list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 30px;
 }
-
 .link-list {
   text-decoration: none;
   font-family: sans-serif;
@@ -62,6 +59,11 @@ body {
 .link-list .link-a {
   text-decoration: none;
   color: #7d8fb3;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .right-menu {
   display: flex;
@@ -75,13 +77,18 @@ body {
   height: 50px;
   width: 50px;
 }
+.admin-img {
+  margin-top: 35px;
+  margin-right: 20px;
+}
 .menu-text-2 {
-  display: inline-block;
   font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 13px;
   color: #6b7a99;
+  margin-top: 30px;
+  margin-right: 30px;
 }
 .notification-icon {
   height: 50px;
@@ -92,6 +99,8 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 .cancle-icon {
   height: 50px;
@@ -102,32 +111,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  margin-right: 25px;
 }
-.bank-account {
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
+.container-one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.container-one-main {
   display: flex;
   align-items: center;
 }
-.icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+.container-one-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.text {
+.container-one-text {
   margin-left: 20px;
 }
-.account-price {
+.container-one-price {
   font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   color: var(--text-color);
 }
-
-.account-heading {
+.container-one-heading {
   padding-top: 10px;
   font-family: sans-serif;
   font-style: normal;
@@ -135,96 +156,8 @@ body {
   font-size: 12px;
   color: var(--text-p-color);
 }
-.investment {
-  display: flex;
-  align-items: center;
-}
-.investment-icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.investment-price {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--text-color);
-}
-.investment-heading {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--text-p-color);
-}
-.cashback {
-  display: flex;
-  align-items: center;
-}
-.cashback-icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: var(--text-o-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cashback-price {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--text-color);
-}
-.cashback-heading {
-  color: var(--text-p-color);
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-}
-.cash {
-  display: flex;
-  align-items: center;
-}
-.cash-icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: var(--text-o-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cash-price {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--text-color);
-}
-.cash-heading {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--text-p-color);
-}
-.container-one {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 30px;
-}
 .sidebar {
   padding: 30px;
-  float: right;
   height: 1100px;
   width: 330px;
   border: solid #edeff2;
@@ -288,13 +221,18 @@ body {
   justify-content: space-around;
   gap: 10px;
 }
+.container-two {
+  display: flex;
+  align-items: center;
+}
 .card {
   padding: 40px;
   height: 540px;
   width: 590px;
   background-color: #1a2233;
   border-radius: 10px;
-  margin: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .card-head {
   display: flex;
@@ -392,7 +330,8 @@ body {
   width: 590px;
   background-color: var(--text-o-color);
   border-radius: 10px;
-  margin: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 h2 {
   font-weight: 700;
@@ -404,26 +343,21 @@ h2 {
 .transaction {
   display: flex;
 }
-.google-play {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .transaction-icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: var(--text-o-color);
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: #f7f8fa;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 .transaction-text {
   font-weight: 700;
   font-size: 14px;
   color: var(--text-color);
   font-family: sans-serif;
-  margin-top: 10px;
 }
 .transaction-date {
   font-family: sans-serif;
@@ -432,39 +366,17 @@ h2 {
   font-size: 12px;
   margin-top: 10px;
 }
-.stocks {
+.transaction-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
-}
-.vpn-1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.vpn-2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.service-rental {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.main-card {
-  display: flex;
-  align-items: center;
 }
 .card-main {
   margin-top: 30px;
 }
 .text-2 {
   margin-left: 25px;
+  margin-top: 25px;
 }
 .price {
   font-weight: 700;
@@ -477,6 +389,8 @@ h2 {
   width: 590px;
   background-color: #8833ff;
   border-radius: 5%;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .p-card {
   display: flex;
@@ -503,10 +417,14 @@ h2 {
   margin: 30px;
   margin-left: 55px;
 }
+.w-a-b-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .purple-white-card {
   display: flex;
   align-items: center;
-  margin-left: 30px;
 }
 .white-text {
   font-weight: 700;
@@ -550,16 +468,14 @@ h2 {
   margin-top: 20px;
 }
 .apple-card {
-  height: 150px;
-  width: 250px;
+  height: 255px;
+  width: 280px;
   background-color: #ff6633;
   border-radius: 10px;
-  /* margin-left: 100px;
-  margin-top: 70px; */
 }
 .apple-icon {
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 45px;
+  margin-left: 45px;
 }
 .heading-apple {
   font-weight: 700;
@@ -575,20 +491,25 @@ h2 {
   font-family: sans-serif;
   color: var(--text-o-color);
   margin-top: 35px;
-  margin-right: 80px;
+  margin-right: 110px;
 }
 .blue-card {
-  height: 200px;
-  width: 250px;
+  height: 255px;
+  width: 280px;
   background-color: #33bfff;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .two-cards {
   display: flex;
+  align-items: center;
+  gap: 30px;
 }
 .battery-icon {
-  margin-top: 80px;
-  margin-left: 130px;
+  margin-bottom: 20px;
 }
 .battery {
   color: var(--text-o-color);
