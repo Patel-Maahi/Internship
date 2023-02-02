@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-2 Assignment</title>
+  </head>
+
+  <body>
+    <script>
+      //creating a date object with today's date//
+      var todayDate = new Date();
+      document.write(todayDate + "<br>");
+      //creating a date object with the date of 15 december 2022//
+      let date = new Date("December 15 2022");
+      document.write(date + "<br>");
+      //program to display current day and time//
+      let today = new Date();
+      let day = today.getDay();
+      let alldays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      document.write("Today is : " + alldays[day] + "<br>");
+      let time = today.getTime();
+      let hour = today.getHours();
+      let min = today.getMinutes();
+      let sec = today.getSeconds();
+      if (hour > 12) {
+        hour = hour - 12;
+        document.write(
+          "Current time is : " +
+            hour +
+            "PM" +
+            " : " +
+            min +
+            " : " +
+            sec +
+            "<br>"
+        );
+      } else {
+        document.write(
+          "Current time is : " +
+            hour +
+            "AM" +
+            " : " +
+            min +
+            " : " +
+            sec +
+            "<br>"
+        );
+      }
+
+      //program to find the sqaure root of a number//
+      let number = Math.sqrt(144);
+      document.write("Square root of 144 is : " + number + "<br>");
+      //program to find maximum number from given numbers//
+      let num = Math.max(29, 45, 90);
+      document.write(num + "<br>");
+      //creating a random number generator//
+      let random = Math.round(Math.random() * 10);
+      document.write(random + "<br>");
+      //program that checks if the given number is greater than 100 and less than 500.//
+      let x = 600;
+      if (x > 100 && x < 500) {
+        document.write("number is between 100 and 500");
+      } else {
+        document.write("number is greater than 500" + "<br>");
+      }
+      //write a function that returns true if the arguments are equal, and false if they are not.//
+      function equalitycheck(a, b) {
+        if (a === b) {
+          document.write(true + "<br>");
+        } else {
+          document.write(false);
+        }
+      }
+      equalitycheck(4, "4");
+      equalitycheck(5, 5);
+    </script>
+  </body>
+</html>
