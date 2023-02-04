@@ -138,8 +138,11 @@ margin-left: 30px;
     justify-content: space-between;
     padding: 30px;
 }
-.card{
+.dark-card{
     background-color: #1A2233;
+    padding: 40px;
+    flex: 1;
+    border-radius: 10px;
 }
 .card-heading{
     font-size: var(--font-size-24);
@@ -193,4 +196,158 @@ margin-left: 30px;
 }
 .container-4{
     margin-top: 50px;
+}
+.transaction-card{
+ background-color: var(--white-color);
+ padding: 40px;
+ flex: 1;
+ border-radius: 10px;
+}
+h2{
+    font-size: var(--font-size-24);
+    color: var(--grey-blue-50-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    text-align: center;
+}
+.card-main{
+    margin-top: 30px;
+}
+.transaction-icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #F7F8FA;
+}
+.transaction-text{
+    font-size: var(--font-size-14);
+    color: var(--grey-blue-50-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+}
+.transaction-date{
+    font-size: var(--font-size-12);
+    color: var(--grey-blue-80-color);
+    font-weight: var(--font-weight);
+    font-style: var(--font-family);
+    margin-top: 5px;
+}
+.transaction-price{
+    font-size: var(--font-size-18);
+    color: var(--grey-blue-50-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-weight);
+}
+.transaction-details{
+    justify-content: space-between;
+}
+.text-2{
+    margin-left: 25px;
+}
+/* .container-two{
+    flex: 1;
+} */
+.purple-card{
+    background-color: #8833FF;
+    flex: 1;
+}
+.purple-card-text{
+    font-size: var(--font-size-18);
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+}
+.purple-card-price{
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    color: var(--white-color);
+}
+.p-card{
+    justify-content: space-between;
+}
+.services-icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+}
+.services-text{
+    font-size: var(--font-size-12);
+    color: var(--grey-blue-50-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+}
+.services{
+    background-color: var(--white-color);
+    flex: 1;
+}
+.white-card-text{
+    font-size: var(--font-size-14);
+    color: var(--grey-blue-50-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+}
+.white-card{
+    background-color: var(--white-color);
+}
+.apple-card{
+    background-color: #FF6633;
+}
+.heading-apple{
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    font-size: var(--font-size-18);
+    margin-top: 25px;
+    margin-left: 40px;
+}
+.heading-price{
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    font-size: var(--font-size-36);
+    margin-top: 35px;
+    margin-left: 40px;
+}
+.apple-icon{
+    margin-top: 45px;
+    margin-left: 45px;
+}
+.blue-card{
+    background-color: #33BFFF;
+}
+.messenger-icon{
+    margin-top: 90px;
+    margin-left: 130px;
+}
+.messenger{
+    font-size: var(--font-size-30);
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    margin-left: 110px;
+    margin-top: 15px;
+}
+.purple-card{
+    flex: 1;
+}
+.container-services{
+    flex: 1;
+}
+.services{
+    flex: 1;
+}
+.white-card{
+    flex: 1;
+}
+.apple-card{
+    flex: 1;
+}
+.blue-card{
+    flex: 1;
+}
+.link-a:hover{
+    background-color: red;
+    padding: 15px;
 }
