@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment</title>
+    <title>Assignment-2</title>
   </head>
   <body>
     <script>
@@ -43,14 +43,24 @@
           break;
       }
       //reverse a string//
-      var str = 'hello world';
-      var strReverse = '';
-      for (let i = str.length-1; i >=0 ; i--)
-      {
-          strReverse += str[i]
+      var str = "hello world";
+      var strReverse = "";
+      for (let i = str.length - 1; i >= 0; i--) {
+        strReverse += str[i];
       }
       console.log(strReverse);
-      
+
+      //palindrome string or not//
+      let strng = "radar";
+      let reversestrng = "";
+      for (let i = strng.length - 1; i >= 0; i--) {
+        reversestrng += strng[i];
+      }
+      if (reversestrng == strng) {
+        console.log("It is a palindrome string");
+      } else {
+        console.log("It is not a palindrome string");
+      }
     </script>
   </body>
 </html>
