@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3</title>
+  </head>
+  <body>
+    <script>
+      //object to string//
+      let fruits = { fruit: "apple" };
+      let a = JSON.stringify(fruits);
+      console.log(a);
+      //string to JSON//
+      let b = JSON.parse(a);
+      console.log(b);
+      //program to check if two objects have same values//
+      let data_1 = {name: "lily" , age: "20"};
+      let data_2 = {name: "lily" , age: "20"};
+      let x = JSON.stringify(data_1);
+      let y = JSON.stringify(data_2);
+      let z = x===y;
+      console.log(z);
+      let data_3 = {name: "lily" , age: "20"};
+      let data_4 = {name: "lily" , age: "21"};
+      console.log(JSON.stringify(data_3)===JSON.stringify(data_4));
+    </script>
+  </body>
+</html>
