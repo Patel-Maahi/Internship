@@ -8,6 +8,32 @@
   </head>
   <body>
     <script>
+      var movies = [
+            {
+                title: 'Suicide Squad', director: 'David Ayer', watched: true
+            },
+            {
+                title: 'Pathaan', director: 'Siddhart Anand', watched: false
+            },
+            {
+                title: 'Shershaah', director: 'Vishnu Vardhan', watched: true
+            }
+        ]
+        function chooseMovie() {
+            for (let i = 0; i < movies.length; i++) {
+                if (movies[i].watched==true){
+                    console.log(`You already watched` + " " + movies[i].title +" "+ `by` + "  " +  movies[i].director);
+                    
+                }
+                else{
+                    console.log(`You still need to watch` + " " + movies[i].title +" "+ `by` + " " +  movies[i].director);
+                    
+                }
+                
+            }
+        }
+        chooseMovie();
+
       //creating a function to calculate a sum of numbers in an array in javascript//
       function sumarray() {
         let a = [2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1];
