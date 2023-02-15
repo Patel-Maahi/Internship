@@ -9,33 +9,41 @@
 <body>
     <script>
         //JavaScript function to retrieve all the values of an object's properties.
-        function value() {
-            let obj = {
+        let obj = {
                 name : 'Maahi',
                 Address : 'Valsad',
             }
-            console.log(Object.values(obj));
+        function value(a) {
+            
+            console.log(Object.values(a));
         }
-        value();
+        value(obj);
         //JavaScript function to convert an object into a list of `[key, value]` pairs.
-        function abc() {
-            let obj1 = {
+        let obj1 = {
                 a: 'Maahi',
                 b: 9,
                 c: 10,
             }
-            console.log(Object.entries(obj1)); 
+        function abc(a) {
+            
+            console.log(Object.entries(a)); 
         }
-        abc();
+        abc(obj1);
         //JavaScript function to get a copy of the object where the keys have become the values and the values the keys.
-        function alternate() {
-            let obj2 = {
+        let obj2 = {
                 a:2,
                 b:3,
                 c:9,
             }
-            console.log();
+        function alternate(x) {
+            let obj = {}
+            for (const key in x) {
+                obj[x[key]] = key;
+            }
+            
+            console.log(obj);
         }
+        alternate(obj2)
         //JavaScript program to find the most frequent item of an array.
         let arr = [1,2,3,1,2,4,5,6];
         function frequentItems() {
@@ -53,19 +61,21 @@
         frequentItems();
         //JavaScript program to remove duplicate items from an array (ignore case sensitivity).
         let arr1 = [1,2,3,1,3,4,5];
-        function duplicateValues() {
-            let arr2 = []
-            
-        let arr3= arr1.forEach(n=>console.log(n));
-             
-            let duplicate = arr2.includes(arr3);
-            
-            if (duplicate==true) {
-                arr2.push(n)
-            }
     
-            console.log(arr2);
+function duplicateValue(params) {
+    let b = [];
+    for (const iterator of params) {
+        if (b.includes(iterator)) {
+            continue;
         }
+        else   {
+            b.push(iterator)
+        }  
+    }
+    return (b);
+}
+console.log(duplicateValue(arr1));
+
 
 
 //JavaScript function to remove a specific element from an array.
