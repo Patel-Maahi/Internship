@@ -35,7 +35,8 @@
        for (let i = 0; i < word_split.length; i++) {
         largest[i]=word_split[i].length;       
        }
-       var max = Math.max(...largest);
+       
+       let max = Math.max(...largest);
        console.log("largest word is: "+word_split[largest.indexOf(max)]);
       }
       longest('My name is Maahi');
