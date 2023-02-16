@@ -46,24 +46,21 @@
       let c = alternate(obj2);
       console.log(c);
       //4.JavaScript program to find the most frequent item of an array.
-      let arr = [1, 2, 3, 1, 2, 4, 5, 3, 3, 3, 3, 6, "a", "a", "b"];
+      let arr = [1, 2, 3, 1, 2, 4, 5, 3, 3, 3, 3, 6, "a", "a","a","a","a" ,"b"];
       function frequentItems(item) {
-        let empty = [];
-        let result = item.reduce(function (acc, curr) {
+        let result = item.reduce((acc, curr)=> {
           if (acc[curr]) {
             acc[curr] = ++acc[curr];
           } else {
             acc[curr] = 1;
           }
           return acc;
-        }, []);
-        for (const key in result) {
-          if (result[key] > 1) {
-            empty.push(key);
-          }
-        }
-        return empty;
-      }
+        }, {});
+        let abc = Object.values(result);
+        let x = Math.max(...abc);
+        var key = Object.keys(result).filter(key =>result[key] === x); 
+        return key;
+       }
 
       let frequent = frequentItems(arr);
       console.log(frequent);
@@ -83,6 +80,41 @@
       }
       let d = duplicateValue(arr1);
       console.log(d);
+//2.
+      let arr2 = [1, 2, 3, 1, 3, 4 ,5,{id:1,name:'Maahi'},{id:2,name:'Sweta'},{id:1,name:'Maahi'}];
+var empty1 = [];
+for (const x of arr2) {
+    if (typeof(x) === 'object') {
+      empty1 .push(JSON.stringify(x));
+    } else {
+      empty1 .push((x));
+    }
+}
+console.log(empty1);
+
+      function duplicateValue(value) {
+        let duplicate = [];
+        for (const iterator of value) 
+        if (duplicate.includes(iterator)) {
+            continue;
+        }
+          else { 
+            duplicate.push(iterator);
+        }
+        let a=[];
+        for (const iterator of duplicate) {
+            if (typeof(iterator)==='string') {
+                a.push(JSON.parse(iterator));
+            }
+            else{
+                a.push(iterator)
+            }
+          }
+        
+        return a;
+    }  
+      let val = duplicateValue(empty1);
+      console.log(val);
       //6.JavaScript function to merge two arrays and removes all duplicates elements.
       let array2 = [1, 2, 3, 4];
       let array3 = [2, 3, 4, 5, 6, 7];
