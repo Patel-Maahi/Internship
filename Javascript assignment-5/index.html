@@ -56,7 +56,7 @@
             acc[curr] = 1;
           }
           return acc;
-        }, {});
+        }, []);
         for (const key in result) {
           if (result[key] > 1) {
             empty.push(key);
