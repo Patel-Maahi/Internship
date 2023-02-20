@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-6</title>
+    <style>
+        .link-list{
+            text-decoration: none;
+        }
+        .list{
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        let sidebar = [{"name":'home',"link":'https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute'},
+    {'name':'about us','link': 'https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute'},
+    {'name': 'contact','link':'https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute'}]
+        
+        let aside = document.createElement('aside');
+        let nav = document.createElement('nav');
+        aside.appendChild(nav)
+        function sideBar(sides,data) {
+            let ul = document.createElement('ul')
+            nav.appendChild(ul)
+            let ulStyle = ul.classList.add('list')
+            ul.style = 'list'
+           
+            for (const element of data) {
+                let li = document.createElement('li');
+            ul.appendChild(li)
+            
+                let a = document.createElement('a');
+            li.appendChild(a)
+            let text = document.createTextNode(element.name);
+            a.appendChild(text)
+            let links = a.classList.add('link-list');
+            a.style = 'link-list'
+            for (const key in element) {
+                a.setAttribute('href',element[key]) 
+            }       
+        }
+    }
+    
+        sideBar(aside,sidebar)
+        console.log(aside);
+        let body = document.querySelector('body')
+        body.appendChild(aside);
+    </script>
+</body>
+</html>
