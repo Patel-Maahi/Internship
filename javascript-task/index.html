@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="form" >
+        <label for="fname">First Name : </label>
+        <input type="text" name="firstName" id="fname" required>
+        <br>
+        <br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="lastName" id="lname" required>
+        <br>
+        <br>
+        <button type="submit" id="save-data" >Save Data</button>
+        <button id="update-btn">Update Data</button>
+        
+        </form>
+
+
+        <script>
+           
+           let input = fetch(' http://localhost:3000/form')
+.then((response)=>response.json()).then((value)=>localStorage.setItem("value",JSON.stringify(value)))
+let a = localStorage.getItem("value")
+let b = JSON.parse(a);
+
+            
+            let header = {"firstName":"FIRST NAME","lastName":"LAST NAME","id":"ID","action":"ACTION"}
+
+             let table = document.createElement('table');
+             function tHead(tble,value) {
+                let thead = table.createTHead('thead');
+                let row = thead.insertRow()
+                for (const key in value) {
+                    let th = document.createElement('th');
+                    row.appendChild(th);
+                    let text = document.createTextNode(value[key]);
+                    th.appendChild(text)   
+                } 
+             }
+             tHead(table,header)
+             console.log(table);
+
+             function tBody(tble,data) {
+        let tbody = tble.createTBody();
+        for (const element of data) {
+            let row = tbody.insertRow();
+            for (const key in element) {
+                let cell =row.insertCell();
+                let text = document.createTextNode(element[key])
+                cell.appendChild(text)
+                
+            }   
+            
+            
+        }
+    }
+    tBody(table,b);
+    let body = document.querySelector('body')
+    body.appendChild(table)
+
+     let formData= document.getElementById('save-data');
+      formData.addEventListener("click", (e)=>
+      {
+        e.preventDefault();
+        let fName = document.getElementById("fname").value;
+        let lName = document.getElementById("lname").value;
+        
+        let saveData =  {
+           method:"POST",
+           headers: {'Content-Type': 'application/json'},
+           body: JSON.stringify({ firstName: fName, lastName: lName})
+        
+   };
+
+   fetch("http://localhost:3000/form",saveData).then(response=>response.json()).then(data=>data).catch(err=>console.error(err))
+      }
+      
+      );
+
+   
+
+    
+     
+     
+     
+   
+
+     
+
+
+       
+     
+     
+   
+     
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+    </form>
+</body>
+</html>
