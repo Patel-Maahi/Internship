@@ -24,181 +24,84 @@
 
 
         <script>
-           
-           let input = fetch(' http://localhost:3000/form')
-.then((response)=>response.json()).then((value)=>localStorage.setItem("value",JSON.stringify(value)))
-let a = localStorage.getItem("value")
-let b = JSON.parse(a);
-
-            
-            let header = {"firstName":"FIRST NAME","lastName":"LAST NAME","id":"ID","action":"ACTION"}
-
+            let header = [{"header":"ID","key":"id"},{"header":"FIRST NAME","key":"firstName"},{"header":"LAST NAME","key":"lastName"}]
              let table = document.createElement('table');
              function tHead(tble,value) {
                 let thead = table.createTHead('thead');
                 let row = thead.insertRow()
-                for (const key in value) {
-                    let th = document.createElement('th');
-                    row.appendChild(th);
-                    let text = document.createTextNode(value[key]);
-                    th.appendChild(text)   
-                } 
+                for (const element of value) {
+                    let th = document.createElement("th")
+                    let text = document.createTextNode(element.header)
+                    th.appendChild(text)
+                    row.appendChild(th) 
+                }
+                let th = document.createElement("th")
+                    let text = document.createTextNode("ACTION")
+                    th.appendChild(text)
+                    row.appendChild(th) 
              }
              tHead(table,header)
              console.log(table);
-
-             function tBody(tble,data) {
-        let tbody = tble.createTBody();
+             fetch("http://localhost:3000/form").then(response=>response.json()).then(data=>{
+        let tbody = table.createTBody("tbody");
         for (const element of data) {
             let row = tbody.insertRow();
-            for (const key in element) {
+            for (const key of header) {
                 let cell =row.insertCell();
-                let text = document.createTextNode(element[key])
+                let text = document.createTextNode(element[key["key"]])
                 cell.appendChild(text)
-                
-                
-    
             }   
-            let td4 = document.createElement("td");
+            let td = document.createElement("td");
             let btn1 = document.createElement("button")
-            let btn1Text = document.createTextNode("Delete")
+            let btn1Text = document.createTextNode("Delete");
             btn1.appendChild(btn1Text)
-            td4.appendChild(btn1)
-            row.appendChild(td4)
+            td.appendChild(btn1)
+            btn1.addEventListener("click",()=>{
+                fetch(`http://localhost:3000/form/${element.id}`,{method:"DELETE"})   
+            })
+            row.appendChild(td)
             btn1.classList.add("btn-1")
-            
-            let td5 = document.createElement("td");
             let btn2 = document.createElement("button")
             let btn2Text = document.createTextNode("Edit")
             btn2.appendChild(btn2Text)
-            td5.appendChild(btn2)
-            row.appendChild(td5)  
-            btn2.classList.add("btn-2") 
+            btn2.addEventListener("click",()=>{
+                document.getElementById("fname").value=element.firstName;
+                document.getElementById("lname").value=element.lastName;
+                let updateData = document.getElementById("update-btn")
+                updateData.addEventListener("click",()=>{ 
+                    let updateData =  {
+           method:"PUT",
+           headers: {'Content-Type': 'application/json'},
+           body: JSON.stringify({firstName:document.getElementById("fname").value ,lastName:document.getElementById("lname").value})
+   };
+   fetch(`http://localhost:3000/form/${element["id"]}`,updateData).then(response=>response.json()).then(data=>data).catch(err=>console.error(err))
+                })
+            }
+            )
+            td.appendChild(btn2)
+            row.appendChild(td)  
+            btn2.classList.add("btn-2")
         }
     }
-    tBody(table,b);
-    let body = document.querySelector('body')
-    body.appendChild(table)
+    ).catch(err=>console.error(err))
 
+             let body = document.querySelector('body')
+    body.appendChild(table)  
      let formData= document.getElementById('save-data');
       formData.addEventListener("click", ()=>
       {
-        // e.preventDefault();
         let fName = document.getElementById("fname").value;
         let lName = document.getElementById("lname").value;
         
         let saveData =  {
            method:"POST",
            headers: {'Content-Type': 'application/json'},
-           body: JSON.stringify({ firstName: fName, lastName: lName})
-        
+           body: JSON.stringify({firstName:fName,lastName:lName}) 
    };
-
    fetch("http://localhost:3000/form",saveData).then(response=>response.json()).then(data=>data).catch(err=>console.error(err))
       }
-      
       );
-
-      let del = document.querySelector(".btn-1")
-      del.addEventListener("click",()=>{
-        let delData = fetch('http://localhost:3000/form/4', {
-           method: 'DELETE',
-           })
-.then(res => res.json()) 
-.then(res => console.log(res))
-
-      })
-
-      let edit = document.querySelector(".btn-2")
-      edit.addEventListener("click",()=>{
-       
-       let getData =  fetch('http://localhost:3000/form/5', {
-           method: 'GET',
-           }).then(res => res.json()) 
-.then(res => console.log(res))
-        //    console.log(getData);
-
-           function appendData(data) {
-            let form = document.getElementById("form")
-            let fName = document.getElementById("fname")
-        let lName = document.getElementById("lname")
-        for (const key in data) {
-            // fName.appendChild(data[key][0])
-            console.log(data[key]);
-        }
-        fName.appendChild(getData)
-            console.log(fName);
-           } appendData(getData);
-
-
-
-
-//            function appendData(data) {
-//             let form = document.getElementById("form")
-        
-//   for (var i = 0; i < data.length; i++) {
-//     let fName = document.getElementById("fname")
-//     fName.innerHTML = 'First Name: ' + data[i].firstName;
-
-//         let lName = document.getElementById("lname")
-    
-//     lName.innerHTML = 'Last Name: ' + data[i].lastName;
-
-//     fname.appendChild(fName);
-//     lname.appendChild(lName)
-//   }
-// }
-// console.log(appendData(getData))
-       
-        // let fName = document.getElementById("fname")
-        // let lName = document.getElementById("lname")
-
-//         const putData = {
-//  method: 'PUT', 
-//  headers: {
-//   'Content-type': 'application/json; charset=UTF-8' },
-//  body: JSON.stringify({ firstName: fName, lastName: lName}),
-//  }
- 
-// fetch("http://localhost:3000/form", putData).then(response => response.json())
-// .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
-// .catch(err => console.log(err)) // D
-     } )
-     
-    
-    
-     
-     
-     
-   
-
-     
-
-
-       
-     
-     
-   
-     
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
         </script>
-
-
-
     </form>
 </body>
 </html>
