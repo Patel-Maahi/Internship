@@ -56,9 +56,24 @@ let b = JSON.parse(a);
                 let text = document.createTextNode(element[key])
                 cell.appendChild(text)
                 
+                
+    
             }   
+            let td4 = document.createElement("td");
+            let btn1 = document.createElement("button")
+            let btn1Text = document.createTextNode("Delete")
+            btn1.appendChild(btn1Text)
+            td4.appendChild(btn1)
+            row.appendChild(td4)
+            btn1.classList.add("btn-1")
             
-            
+            let td5 = document.createElement("td");
+            let btn2 = document.createElement("button")
+            let btn2Text = document.createTextNode("Edit")
+            btn2.appendChild(btn2Text)
+            td5.appendChild(btn2)
+            row.appendChild(td5)  
+            btn2.classList.add("btn-2") 
         }
     }
     tBody(table,b);
@@ -66,9 +81,9 @@ let b = JSON.parse(a);
     body.appendChild(table)
 
      let formData= document.getElementById('save-data');
-      formData.addEventListener("click", (e)=>
+      formData.addEventListener("click", ()=>
       {
-        e.preventDefault();
+        // e.preventDefault();
         let fName = document.getElementById("fname").value;
         let lName = document.getElementById("lname").value;
         
@@ -84,8 +99,73 @@ let b = JSON.parse(a);
       
       );
 
-   
+      let del = document.querySelector(".btn-1")
+      del.addEventListener("click",()=>{
+        let delData = fetch('http://localhost:3000/form/4', {
+           method: 'DELETE',
+           })
+.then(res => res.json()) 
+.then(res => console.log(res))
 
+      })
+
+      let edit = document.querySelector(".btn-2")
+      edit.addEventListener("click",()=>{
+       
+       let getData =  fetch('http://localhost:3000/form/5', {
+           method: 'GET',
+           }).then(res => res.json()) 
+.then(res => console.log(res))
+        //    console.log(getData);
+
+           function appendData(data) {
+            let form = document.getElementById("form")
+            let fName = document.getElementById("fname")
+        let lName = document.getElementById("lname")
+        for (const key in data) {
+            // fName.appendChild(data[key][0])
+            console.log(data[key]);
+        }
+        fName.appendChild(getData)
+            console.log(fName);
+           } appendData(getData);
+
+
+
+
+//            function appendData(data) {
+//             let form = document.getElementById("form")
+        
+//   for (var i = 0; i < data.length; i++) {
+//     let fName = document.getElementById("fname")
+//     fName.innerHTML = 'First Name: ' + data[i].firstName;
+
+//         let lName = document.getElementById("lname")
+    
+//     lName.innerHTML = 'Last Name: ' + data[i].lastName;
+
+//     fname.appendChild(fName);
+//     lname.appendChild(lName)
+//   }
+// }
+// console.log(appendData(getData))
+       
+        // let fName = document.getElementById("fname")
+        // let lName = document.getElementById("lname")
+
+//         const putData = {
+//  method: 'PUT', 
+//  headers: {
+//   'Content-type': 'application/json; charset=UTF-8' },
+//  body: JSON.stringify({ firstName: fName, lastName: lName}),
+//  }
+ 
+// fetch("http://localhost:3000/form", putData).then(response => response.json())
+// .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
+// .catch(err => console.log(err)) // D
+     } )
+     
+    
     
      
      
