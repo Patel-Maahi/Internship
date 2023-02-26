@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD operation</title>
+</head>
+<body>
+    <form id="form">
+        <label for="fName">First Name </label>
+        <input type="text"  id="fName" placeholder="firstname" required>
+        <br>
+        <br>
+        <label for="lName">Last Name</label>
+        <input type="text" id="lName" placeholder="lastname" required>
+        <br>
+        <br>
+        <label for="technology">Technology</label>
+        <input type="text" id="technology" placeholder="technology" required>
+        <br>
+        <br>
+        <button id="save-btn">Save Data</button>
+        <button id="update-btn">Update Data</button>
+    </form>
+
+    <script>
+         let headers = [{"key":"id","header":"ID"},{"key":"firstName","header":"FIRSTNAME"},{"key":"lastName","header":"LASTNAME"},{"key":"technology","header":"TECHNOLOGY"}]
+         let table = document.createElement("table");
+         function tHead(tble,data) {
+            let thead = tble.createTHead("thead")
+            let row = thead.insertRow("tr");
+            for (const iterator of data) {
+                let th =  document.createElement("th");
+                let text = document.createTextNode(iterator.header);
+                th.appendChild(text);
+                row.appendChild(th);
+            }  
+         }
+         tHead(table,headers);
+         console.log(table);  
+
+         let body = document.querySelector("body")
+         body.appendChild(table)
+
+
+        let saveData = document.getElementById("save-btn")
+        saveData.addEventListener("click",()=>{
+            let fName = document.getElementById("fName").value;
+            let lName = document.getElementById("lName").value;
+            let tech = document.getElementById("technology").value;
+
+            fetch("http://localhost:3000/form",{
+                method:"POST",
+                headers:{"Content-Type":"application/json"},
+                body:JSON.stringify({firstName:fName,lastName:lName,tecHnology:technology})
+            }).then((response)=>response.json()).then(data=>console.log(data))
+        })
+
+
+
+
+
+         fetch("http://localhost:3000/form").then(Response=>Response.json()).then(data=>{
+         let tbody  = table.createTBody("tbody")
+         for (const element of data) {
+            let row = tbody.insertRow("tr")
+            for (const iterator of headers) {
+                let cell = row.insertCell("td")
+                let text = document.createTextNode(element[iterator["key"]])
+                cell.appendChild(text)
+                row.appendChild(cell)
+            }
+         }
+
+         })
+
+
+    </script>
+    
+</body>
+</html>
