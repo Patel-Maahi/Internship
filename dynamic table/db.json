@@ -16,7 +16,36 @@
   "profile": {
     "name": "typicode"
   },
-  "form": {
-    
-  }
+  "form": [
+    {
+      "firstName": "Maahi",
+      "lastName": "Patel",
+      "technology": "Frontend",
+      "id": 1
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Patel",
+      "technology": "Frontend",
+      "id": 2
+    },
+    {
+      "firstName": "Nupur",
+      "lastName": "Pandya",
+      "technology": "Frontend",
+      "id": 3
+    },
+    {
+      "firstName": "Diya",
+      "lastName": "Bulsara",
+      "technology": "Frontend",
+      "id": 4
+    },
+    {
+      "firstName": "Yashvi",
+      "lastName": "Patel",
+      "technology": "Frontend",
+      "id": 5
+    }
+  ]
 }

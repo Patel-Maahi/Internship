@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table-data{
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+.table-head{
+    padding: 10px;
+    text-align: center;
+    background-color: pink;
+    color: rgb(85, 82, 82);   
+}
+.table1{
+    width: 100%;
+    padding: 5px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.delete-btn{
+    background-color: rgb(146, 86, 96);
+    border: none;
+    padding: 10px 30px ;
+    border-radius: 3px;
+    color: white;  
+}
+.edit-btn{
+    background-color:rgb(146, 86, 96);
+    border: none;
+    padding: 10px 30px;
+    margin-left: 10px;
+    border-radius: 3px;
+    color: white;
+}
+#save-btn ,#update-btn{
+    background-color: rgb(223, 150, 162);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    color: white; 
+}
+#form{
+    background-color:#f2f2f2;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px;
+}
+#fName,#lName,#technology{
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
