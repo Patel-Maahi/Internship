@@ -42,10 +42,16 @@
       "id": 4
     },
     {
-      "firstName": "Yashvi",
+      "firstName": "Maahi",
       "lastName": "Patel",
-      "technology": "Frontend",
+      "technology": "dsfdsfsfd",
       "id": 5
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Pandya",
+      "technology": "dsfdsfsfd",
+      "id": 6
     }
   ]
 }

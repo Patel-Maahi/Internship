@@ -9,17 +9,23 @@ saveData.addEventListener("click", () => {
   let fName = document.getElementById("fName").value;
   let lName = document.getElementById("lName").value;
   let tech = document.getElementById("technology").value;
-  fetch("http://localhost:3000/form", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      firstName: fName,
-      lastName: lName,
-      technology: tech,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  if (fName.trim() == "" || lName.trim() == "" || tech.trim()=="") {
+    alert("Fill data")
+  }
+  else{
+
+    fetch("http://localhost:3000/form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName: fName,
+        lastName: lName,
+        technology: tech,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
 });
 let table = document.createElement("table");
 table.classList.add("table1");
