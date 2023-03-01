@@ -5,9 +5,8 @@
 
 
 
-let email1 = document.getElementById("mail1");
-let salary=  document.getElementById("salary");
-let passWord = document.getElementById("passWord");
+
+
 
 
 
@@ -46,7 +45,7 @@ function validate() {
         flag = 0;
      }
       let phoneNo = document.getElementById("phone-num").value;
-      let phoneRegex = /^[798][0-9]{9}$/;
+      let phoneRegex = /^[6-9][0-9]{9}$/;
       if(phoneNo==""){
         document.getElementById("phone-p").innerHTML = "Phone no. is empty"
         flag  = 0;
@@ -59,7 +58,87 @@ function validate() {
         flag = 0;
       }
       let email = document.getElementById("mail").value;
-      let mailRegex = /^[a-zA-Z/_/][0-9]/
+      let mailRegex = /^([a-zA-Z\_.\0-9]+)@([a-zA-Z0-9]+).([a-z]{2,20})$/;
+      if(email==""){
+         document.getElementById("mail-p").innerHTML = "Email is required"
+         flag= 0;
+      }
+      else if(email.match(mailRegex)){
+         flag = 1;
+      }
+      else{
+         document.getElementById("mail-p").innerHTML = "Enter valid email id"
+         flag = 0;
+      }
+      let email1 = document.getElementById("mail1").value;
+      let email1Regex = /^([a-zA-Z\_.\0-9]+)@([a-zA-Z0-9]+).([a-z]{2,20})$/;
+      if(email1==""){
+         document.getElementById("mail1-p").innerHTML = "Email is required"
+         flag= 0;
+      }
+      else if(email1.match(email1Regex)){
+         flag=1;
+      }
+      else{
+         document.getElementById("mail1-p").innerHTML = "Enter valid email id"
+         flag = 0;
+      }
+      // let salary=  document.getElementById("salary");
+
+      let passWord = document.getElementById("passWord").value;
+      let passWordRegex = /^([a-zA-Z0-9])([^A-Za-z0-9]){8,16}$/
+      if(passWord=""){
+         document.getElementById("password-p").innerHTML = "Password is empty"
+         flag = 0;
+      }
+      else if(passWord.match(passWordRegex)){
+         flag = 1;
+      }
+      else{
+         let oneUppercase = /^[A-Z]$/;
+         let oneLowercase = /^[a-z]$/;
+         let oneSpecialChar = /^[^a-zA-Z0-9]$/;
+         let oneNumeric = /^[0-9]$/;
+         let length = /^{8,16}$/;
+         if(oneLowercase.test(passWord)){
+            flag =1;
+         }
+         else{
+            document.getElementById("password-p").innerHTML = "Password must contain atleast one lowercase letter"
+            flag = 0;
+         }
+         if(oneUppercase.test(passWord)){
+            flag =1;
+         }
+         else{
+            document.getElementById("password-p").innerHTML = "Password must contain atleast one uppercase letter"
+            flag =0;
+         }
+         if(oneSpecialChar.test(passWord)){
+            flag = 1;
+         }
+         else{
+            document.getElementById("password-p").innerHTML = "Password must contain atleast one special character"
+            flag =0;
+         }
+         if(oneNumeric.test(passWord)){
+            flag =1;
+         }
+         else{
+            document.getElementById("password-p").innerHTML = "Password must contain atleast one numeric value"
+            flag =0;
+         }
+         if(length.test(passWord)){
+            flag =1;
+         }
+         else{
+            document.getElementById("password-p").innerHTML = "Password length should be minimum 8 characters"
+            flag =0;
+         }
+      }
+
+
+
 
 
 
