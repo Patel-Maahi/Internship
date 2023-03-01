@@ -1,9 +1,15 @@
 let headers = {
-  id: "ID",
-  firstName: "FIRSTNAME",
-  lastName: "LASTNAME",
-  technology: "TECHNOLOGY",
+  "id": "ID",
+  "firstName": "FIRSTNAME",
+  "lastName": "LASTNAME",
+  "technology": "TECHNOLOGY",
 };
+function getData(e) {
+  e.preventDefault()
+  fetch("http://localhost:3000/form").then(response=>response.json().then(data=>console.log(data)))
+}
+
+
 let saveData = document.getElementById("save-btn");
 saveData.addEventListener("click", () => {
   let fName = document.getElementById("fName").value;
@@ -13,7 +19,6 @@ saveData.addEventListener("click", () => {
     alert("Fill data")
   }
   else{
-
     fetch("http://localhost:3000/form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -78,7 +83,7 @@ window.addEventListener("load", () => {
         delBtn.addEventListener("click", () => {
           fetch(`http://localhost:3000/form/${element.id}`, {
             method: "DELETE",
-          })
+          }) , getData()
             .then((response) => response.json())
             .then((data) => console.log(data));
         });

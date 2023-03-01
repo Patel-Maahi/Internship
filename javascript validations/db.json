@@ -16,30 +16,24 @@
   "profile": {
     "name": "typicode"
   },
-  "form": [
+  "table": [
     {
       "firstName": "Maahi",
       "lastName": "Patel",
-      "technology": "Frontend",
+      "phoneno": "9328509591",
+      "emailOrganization": "abc@1Rivet.com",
+      "emailPersonal": "abc.xyz@gmail.com",
+      "salary": "6000",
       "id": 1
     },
     {
-      "firstName": "Sweta",
+      "firstName": "Sweta ",
       "lastName": "Patel",
-      "technology": "Frontend",
+      "phoneno": "8765432345",
+      "emailOrganization": "abc@1Rivet.com",
+      "emailPersonal": "abc.xyz@gmail.com",
+      "salary": "9000",
       "id": 2
-    },
-    {
-      "firstName": "Nupur",
-      "lastName": "Pandya",
-      "technology": "Frontend",
-      "id": 3
-    },
-    {
-      "firstName": "Diya",
-      "lastName": "Bulsara",
-      "technology": "Frontend",
-      "id": 4
     }
   ]
 }
