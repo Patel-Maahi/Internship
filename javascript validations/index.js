@@ -154,3 +154,14 @@ function validate() {
 
   
 }
+
+// let form = document.getElementById("form")
+// form.addEventListener("submit", (e)=>{
+//   e.preventDefault()
+//   displayData()})
+
+  // function displayData(tble,data) {
+  //   let headers = {"firstname":"FIRSTNAME","lastname":"LASTNAME","phoneno":"PHONE NO.","email":"ORGANIZATION EMAIL","email1":"PERSONAL EMAIL","salary":"SALARY"}
+  //   let table = document.createElement("table")
+  //   console.log(table);
+  // }
