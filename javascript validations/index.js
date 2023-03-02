@@ -1,13 +1,14 @@
 let submit = document.getElementById("submit-btn");
 submit.addEventListener("click", (e) => {
   e.preventDefault();
+  
   validate();
 });
 function validate() {
   let firstname = document.querySelector("#fName").value;
   let fnameRegex = /^[a-zA-Z0-9]+$/;
   if (firstname == "") {
-    document.getElementById("fMessage").innerHTML = "First Name is empty";
+    document.getElementById("fMessage").innerHTML = "First name is empty";
 
     let inputcolor = document.getElementById("fName");
     inputcolor.style.border = "1px solid red";
@@ -128,7 +129,8 @@ function validate() {
     phoneMessage.innerHTML == "" &&
     mailMessage.innerHTML == "" &&
     mail1Message.innerHTML == "" &&
-    salaryMessage.innerHTML == ""
+    salaryMessage.innerHTML == ""&&
+    passwordMessage.innerHTML == ""
   ) {
     let firstname = document.getElementById("fName").value;
     let lastname = document.getElementById("lName").value;
@@ -150,18 +152,9 @@ function validate() {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
-  }
+      window.location.href = "records.html";
+    }
 
   
 }
 
-// let form = document.getElementById("form")
-// form.addEventListener("submit", (e)=>{
-//   e.preventDefault()
-//   displayData()})
-
-  // function displayData(tble,data) {
-  //   let headers = {"firstname":"FIRSTNAME","lastname":"LASTNAME","phoneno":"PHONE NO.","email":"ORGANIZATION EMAIL","email1":"PERSONAL EMAIL","salary":"SALARY"}
-  //   let table = document.createElement("table")
-  //   console.log(table);
-  // }

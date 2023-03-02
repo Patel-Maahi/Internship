@@ -6,17 +6,22 @@
 html , body{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
-body{
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    overflow: auto;  
+  
 }
 .form-container{
     background-color: rgb(210, 196, 199);
     padding: 40px;
     text-align: left;
-    border-radius: 10px;  
+    border-radius: 10px;
+    /* flex-grow: 1; */
 }
 h1{
     margin-bottom: 30px;
@@ -24,10 +29,11 @@ h1{
     text-align: center;
 }
 input{
-   padding: 3px;
-   margin-bottom: 10px; 
-   margin-left: 10px;
+   padding: 7px;
    width: 100%;
+   outline: 0;
+   border: 1px solid #fefefe;
+   border-radius: 3px;
 }
 #submit-btn{
     padding: 5px;
@@ -36,11 +42,15 @@ input{
     background-color: rgb(238, 82, 108);
     color: white;
     width: 100%;  
+    margin-top: 10px;
 }
 label{
     color: rgb(57, 55, 55);
 }
 .text{
     color: red;
-    font-size: 10px;
+    font-size: 14px;
+}
+.form-group{
+    margin-bottom: 10px;
 }

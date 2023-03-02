@@ -11,7 +11,8 @@ function getData(e) {
 
 
 let saveData = document.getElementById("save-btn");
-saveData.addEventListener("click", () => {
+saveData.addEventListener("click", (e) => {
+  e.preventDefault()
   let fName = document.getElementById("fName").value;
   let lName = document.getElementById("lName").value;
   let tech = document.getElementById("technology").value;
@@ -80,12 +81,14 @@ window.addEventListener("load", () => {
         td.appendChild(delBtn);
         delBtn.classList.add("delete-btn");
         delBtn.style = "delete-btn";
-        delBtn.addEventListener("click", () => {
+        delBtn.addEventListener("click", (e) => {
+          e.preventDefault()
           fetch(`http://localhost:3000/form/${element.id}`, {
             method: "DELETE",
           }) , getData()
             .then((response) => response.json())
             .then((data) => console.log(data));
+           
         });
         let editBtn = document.createElement("button");
         let text1 = document.createTextNode("Edit");
@@ -94,7 +97,8 @@ window.addEventListener("load", () => {
         row.appendChild(td);
         editBtn.classList.add("edit-btn");
         editBtn.style = "edit-btn";
-        editBtn.addEventListener("click", () => {
+        editBtn.addEventListener("click", (e) => {
+          e.preventDefault()
           let fName = (document.getElementById("fName").value =
             element.firstName);
           let lName = (document.getElementById("lName").value =
