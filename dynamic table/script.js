@@ -64,6 +64,7 @@ window.addEventListener("load", () => {
       for (const element of data) {
         let row = document.createElement("tr");
         tbody.appendChild(row);
+        row.classList.add("tableRow")
         for (const key in headers) {
           let td = document.createElement("td");
           let text = document.createTextNode(element[key]);
@@ -126,3 +127,27 @@ window.addEventListener("load", () => {
 });
 let body = document.querySelector("body");
 body.appendChild(table);
+
+ let search = document.getElementById("search");
+ search.addEventListener("keyup",searchData())
+function searchData(){
+  let input = document.getElementById("search");
+  let filter = input.value.toUpperCase();
+  console.log(filter);
+  let table = document.getElementsByClassName("table1");
+  let tr = document.getElementsByTagName("tr");
+ for (let i = 0; i <tr.length ; i++) {
+  let td = tr[i].getElementsByTagName("td")[0];
+  if(td){
+    let textValue = td.textContent || td.innerHTML;
+    if(textValue.toUpperCase().indexOf(filter)>-1){
+      tr[i].style.display = ""
+    }
+    else{
+      tr[i].style.display = "none"
+    }
+  }
+ }
+  
+}
+
